@@ -1,0 +1,153 @@
+<html>
+<head>
+    <title>Purecloud API Client</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-3">
+                <h4>User: <span id="username"></span></h4>
+            </div>
+            <div class="col-md-6">
+                <h4>UserId: <span id="userid"></span></h4>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-1 col-md-offset-11">
+                <button type="button" class="btn btn-warning" onclick="logout();">Logout</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-1">
+                <h4>Status:</h4>
+            </div>
+            <div class="col-md-11">
+                <select id="statusDropDown" class="form-control" onchange="selectedStatusChanged(this.value);"></select>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-1">
+                <h4>Console:</h4>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-2">
+                <h4>Detail View:</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <select id="console" class="form-control" onchange="selectedOutputChanged();" size="20" style="overflow-x: scroll; overflow-y: scroll; white-space: pre; resize: none"></select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <textarea id="detail" class="form-control" size="20" style="overflow-x: scroll; overflow-y: scroll; white-space: pre; resize: none" readonly=""></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Create new system presence:</h3>
+        </div>
+        <div class="col-md-6">
+            <h3>Remove a system presence:</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">name:</span>
+                        <input type="text" id="presenceId"class="form-control" placeholder="id" aria-describedby="sizing-addon2">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">System Presence:</span>
+                        <select id="presenceSystemPresence" class="form-control">
+                            <option id="AVAILABLE">AVAILABLE</option>
+                            <option id="BUSY">BUSY</option>
+                            <option id="AWAY">AWAY</option>
+                            <option id="IDLE">IDLE</option>
+                            <option id="OFFLINE">OFFLINE</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">Language:</span>
+                        <input type="text" id="presenceLanguage" class="form-control" placeholder="en_US" aria-describedby="sizing-addon2" value="en_US" disabled="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">Display Value:</span>
+                        <input type="text" id="presenceDisplayValue" class="form-control" placeholder="Bio Break" aria-describedby="sizing-addon2">
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-default" onclick="submit()">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-1">
+                    <h4>Statuses:</h4>
+                </div>
+                <div class="col-md-11">
+                    <select id="statusesDropDown" class="form-control"></select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Note: Only presences created by this user are listed</h5>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-1 col-md-offset-10">
+                    <button class="btn btn-danger" onclick="deleteStatus(this.value)">Delete Status</button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+    <script src='http://code.jquery.com/jquery-1.11.2.min.js'></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/authenticate.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/apiObjects.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/client.js"></script>
+</body>
+</html>

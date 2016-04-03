@@ -1,0 +1,60 @@
+﻿objects = {
+    "presenceObj": {
+        "name": "Bio Break",
+        "languageLabels": {
+            "en_US": "Bio Break"
+        },
+        "systemPresence": "BUSY",
+        "deactivated": false,
+        "createdBy": {
+            "name": "",
+            "username": "",
+            "email": "",
+            "displayName": "",
+            "phoneNumber": "",
+            "userImages": [],
+            "chat": {},
+            "roles": [],
+            "voicemailEnabled": true,
+            "department": "",
+            "title": "",
+            "routingStatus": {},
+            "password": "",
+            "primaryPresence": {},
+            "conversations": {},
+            "conversationSummary": {},
+            "outOfOffice": {},
+            "geolocation": {},
+            "permissions": [],
+            "requestedStatus": {},
+            "defaultStationUri": "",
+            "stationUri": ""
+        },
+        "createdDate": "",
+        "modifiedBy": {
+            "name": "",
+            "username": "",
+            "email": "",
+            "displayName": "",
+            "phoneNumber": "",
+            "userImages": [],
+            "chat": {},
+            "roles": [],
+            "voicemailEnabled": true,
+            "department": "",
+            "title": "",
+            "routingStatus": {},
+            "password": "",
+            "primaryPresence": {},
+            "conversations": {},
+            "conversationSummary": {},
+            "outOfOffice": {},
+            "geolocation": {},
+            "permissions": [],
+            "requestedStatus": {},
+            "defaultStationUri": "",
+            "stationUri": ""
+        },
+        "modifiedDate": ""
+    }
+}
